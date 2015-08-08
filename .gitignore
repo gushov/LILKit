@@ -33,5 +33,7 @@ DerivedData
 #JetBrains AppCode
 .idea
 
+Pods/
+
 .DS_Store
 .gitreview
