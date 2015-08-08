@@ -1,0 +1,463 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		85B61FE91B73A65E00B935AE /* LILNSStringAdditionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B61FE81B73A65E00B935AE /* LILNSStringAdditionsTests.m */; };
+		85B61FED1B73F68D00B935AE /* LILUTCDateTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 85B61FEB1B73F68D00B935AE /* LILUTCDateTransformer.h */; };
+		85B61FEE1B73F68D00B935AE /* LILUTCDateTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B61FEC1B73F68D00B935AE /* LILUTCDateTransformer.m */; };
+		85EC27E91B737EBD005BE4DF /* LILKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 85EC27E81B737EBD005BE4DF /* LILKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		85EC27EF1B737EBE005BE4DF /* LILKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85EC27E31B737EBD005BE4DF /* LILKit.framework */; };
+		85EC28011B738004005BE4DF /* NSString+LILAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 85EC27FF1B738004005BE4DF /* NSString+LILAdditions.h */; };
+		85EC28021B738004005BE4DF /* NSString+LILAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 85EC28001B738004005BE4DF /* NSString+LILAdditions.m */; };
+		85F4A4561B74B2E100728A43 /* LILUTCDateTransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F4A4551B74B2E100728A43 /* LILUTCDateTransformerTests.m */; };
+		85F4A4591B7658F700728A43 /* LILRFC3339DateTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 85F4A4571B7658F700728A43 /* LILRFC3339DateTransformer.h */; };
+		85F4A45A1B7658F700728A43 /* LILRFC3339DateTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F4A4581B7658F700728A43 /* LILRFC3339DateTransformer.m */; };
+		85F4A45C1B765E8F00728A43 /* LILRFC3339DateTransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F4A45B1B765E8F00728A43 /* LILRFC3339DateTransformerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		85EC27F01B737EBE005BE4DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85EC27DA1B737EBD005BE4DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85EC27E21B737EBD005BE4DF;
+			remoteInfo = LILKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		85B61FE81B73A65E00B935AE /* LILNSStringAdditionsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LILNSStringAdditionsTests.m; sourceTree = "<group>"; };
+		85B61FEB1B73F68D00B935AE /* LILUTCDateTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LILUTCDateTransformer.h; path = transformers/LILUTCDateTransformer.h; sourceTree = "<group>"; };
+		85B61FEC1B73F68D00B935AE /* LILUTCDateTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LILUTCDateTransformer.m; path = transformers/LILUTCDateTransformer.m; sourceTree = "<group>"; };
+		85EC27E31B737EBD005BE4DF /* LILKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LILKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85EC27E71B737EBD005BE4DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85EC27E81B737EBD005BE4DF /* LILKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LILKit.h; sourceTree = "<group>"; };
+		85EC27EE1B737EBE005BE4DF /* LILKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LILKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		85EC27F41B737EBE005BE4DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85EC27FF1B738004005BE4DF /* NSString+LILAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+LILAdditions.h"; path = "categories/NSString+LILAdditions.h"; sourceTree = "<group>"; };
+		85EC28001B738004005BE4DF /* NSString+LILAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+LILAdditions.m"; path = "categories/NSString+LILAdditions.m"; sourceTree = "<group>"; };
+		85F4A4551B74B2E100728A43 /* LILUTCDateTransformerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LILUTCDateTransformerTests.m; sourceTree = "<group>"; };
+		85F4A4571B7658F700728A43 /* LILRFC3339DateTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LILRFC3339DateTransformer.h; path = transformers/LILRFC3339DateTransformer.h; sourceTree = "<group>"; };
+		85F4A4581B7658F700728A43 /* LILRFC3339DateTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LILRFC3339DateTransformer.m; path = transformers/LILRFC3339DateTransformer.m; sourceTree = "<group>"; };
+		85F4A45B1B765E8F00728A43 /* LILRFC3339DateTransformerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LILRFC3339DateTransformerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		85EC27DF1B737EBD005BE4DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85EC27EB1B737EBE005BE4DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85EC27EF1B737EBE005BE4DF /* LILKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		85B61FEF1B73F69400B935AE /* transformers */ = {
+			isa = PBXGroup;
+			children = (
+				85B61FEB1B73F68D00B935AE /* LILUTCDateTransformer.h */,
+				85B61FEC1B73F68D00B935AE /* LILUTCDateTransformer.m */,
+				85F4A4571B7658F700728A43 /* LILRFC3339DateTransformer.h */,
+				85F4A4581B7658F700728A43 /* LILRFC3339DateTransformer.m */,
+			);
+			name = transformers;
+			sourceTree = "<group>";
+		};
+		85EC27D91B737EBD005BE4DF = {
+			isa = PBXGroup;
+			children = (
+				85EC27E51B737EBD005BE4DF /* LILKit */,
+				85EC27F21B737EBE005BE4DF /* LILKitTests */,
+				85EC27E41B737EBD005BE4DF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		85EC27E41B737EBD005BE4DF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				85EC27E31B737EBD005BE4DF /* LILKit.framework */,
+				85EC27EE1B737EBE005BE4DF /* LILKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		85EC27E51B737EBD005BE4DF /* LILKit */ = {
+			isa = PBXGroup;
+			children = (
+				85EC28031B73800A005BE4DF /* categories */,
+				85B61FEF1B73F69400B935AE /* transformers */,
+				85EC27E81B737EBD005BE4DF /* LILKit.h */,
+				85EC27E61B737EBD005BE4DF /* Supporting Files */,
+			);
+			path = LILKit;
+			sourceTree = "<group>";
+		};
+		85EC27E61B737EBD005BE4DF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				85EC27E71B737EBD005BE4DF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		85EC27F21B737EBE005BE4DF /* LILKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				85F4A45B1B765E8F00728A43 /* LILRFC3339DateTransformerTests.m */,
+				85F4A4551B74B2E100728A43 /* LILUTCDateTransformerTests.m */,
+				85B61FE81B73A65E00B935AE /* LILNSStringAdditionsTests.m */,
+				85EC27F31B737EBE005BE4DF /* Supporting Files */,
+			);
+			path = LILKitTests;
+			sourceTree = "<group>";
+		};
+		85EC27F31B737EBE005BE4DF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				85EC27F41B737EBE005BE4DF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		85EC28031B73800A005BE4DF /* categories */ = {
+			isa = PBXGroup;
+			children = (
+				85EC27FF1B738004005BE4DF /* NSString+LILAdditions.h */,
+				85EC28001B738004005BE4DF /* NSString+LILAdditions.m */,
+			);
+			name = categories;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		85EC27E01B737EBD005BE4DF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85F4A4591B7658F700728A43 /* LILRFC3339DateTransformer.h in Headers */,
+				85EC28011B738004005BE4DF /* NSString+LILAdditions.h in Headers */,
+				85B61FED1B73F68D00B935AE /* LILUTCDateTransformer.h in Headers */,
+				85EC27E91B737EBD005BE4DF /* LILKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		85EC27E21B737EBD005BE4DF /* LILKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85EC27F91B737EBE005BE4DF /* Build configuration list for PBXNativeTarget "LILKit" */;
+			buildPhases = (
+				85EC27DE1B737EBD005BE4DF /* Sources */,
+				85EC27DF1B737EBD005BE4DF /* Frameworks */,
+				85EC27E01B737EBD005BE4DF /* Headers */,
+				85EC27E11B737EBD005BE4DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LILKit;
+			productName = LILKit;
+			productReference = 85EC27E31B737EBD005BE4DF /* LILKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		85EC27ED1B737EBE005BE4DF /* LILKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85EC27FC1B737EBE005BE4DF /* Build configuration list for PBXNativeTarget "LILKitTests" */;
+			buildPhases = (
+				85EC27EA1B737EBE005BE4DF /* Sources */,
+				85EC27EB1B737EBE005BE4DF /* Frameworks */,
+				85EC27EC1B737EBE005BE4DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				85EC27F11B737EBE005BE4DF /* PBXTargetDependency */,
+			);
+			name = LILKitTests;
+			productName = LILKitTests;
+			productReference = 85EC27EE1B737EBE005BE4DF /* LILKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		85EC27DA1B737EBD005BE4DF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "August Hovland";
+				TargetAttributes = {
+					85EC27E21B737EBD005BE4DF = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					85EC27ED1B737EBE005BE4DF = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = 85EC27DD1B737EBD005BE4DF /* Build configuration list for PBXProject "LILKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 85EC27D91B737EBD005BE4DF;
+			productRefGroup = 85EC27E41B737EBD005BE4DF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				85EC27E21B737EBD005BE4DF /* LILKit */,
+				85EC27ED1B737EBE005BE4DF /* LILKitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		85EC27E11B737EBD005BE4DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85EC27EC1B737EBE005BE4DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		85EC27DE1B737EBD005BE4DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85B61FEE1B73F68D00B935AE /* LILUTCDateTransformer.m in Sources */,
+				85F4A45A1B7658F700728A43 /* LILRFC3339DateTransformer.m in Sources */,
+				85EC28021B738004005BE4DF /* NSString+LILAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85EC27EA1B737EBE005BE4DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85F4A4561B74B2E100728A43 /* LILUTCDateTransformerTests.m in Sources */,
+				85F4A45C1B765E8F00728A43 /* LILRFC3339DateTransformerTests.m in Sources */,
+				85B61FE91B73A65E00B935AE /* LILNSStringAdditionsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		85EC27F11B737EBE005BE4DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85EC27E21B737EBD005BE4DF /* LILKit */;
+			targetProxy = 85EC27F01B737EBE005BE4DF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		85EC27F71B737EBE005BE4DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		85EC27F81B737EBE005BE4DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		85EC27FA1B737EBE005BE4DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = LILKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		85EC27FB1B737EBE005BE4DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = LILKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		85EC27FD1B737EBE005BE4DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LILKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		85EC27FE1B737EBE005BE4DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LILKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		85EC27DD1B737EBD005BE4DF /* Build configuration list for PBXProject "LILKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85EC27F71B737EBE005BE4DF /* Debug */,
+				85EC27F81B737EBE005BE4DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85EC27F91B737EBE005BE4DF /* Build configuration list for PBXNativeTarget "LILKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85EC27FA1B737EBE005BE4DF /* Debug */,
+				85EC27FB1B737EBE005BE4DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85EC27FC1B737EBE005BE4DF /* Build configuration list for PBXNativeTarget "LILKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85EC27FD1B737EBE005BE4DF /* Debug */,
+				85EC27FE1B737EBE005BE4DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 85EC27DA1B737EBD005BE4DF /* Project object */;
+}
