@@ -1,0 +1,14 @@
+PODS:
+  - LILKit (0.1.0)
+
+DEPENDENCIES:
+  - LILKit (from `../`)
+
+EXTERNAL SOURCES:
+  LILKit:
+    :path: ../
+
+SPEC CHECKSUMS:
+  LILKit: 6a3fb18d643d27e0e420565d91642d80a9568fbf
+
+COCOAPODS: 0.38.2
