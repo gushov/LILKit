@@ -21,6 +21,10 @@
 		85F4A4591B7658F700728A43 /* LILRFC3339DateTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 85F4A4571B7658F700728A43 /* LILRFC3339DateTransformer.h */; };
 		85F4A45A1B7658F700728A43 /* LILRFC3339DateTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F4A4581B7658F700728A43 /* LILRFC3339DateTransformer.m */; };
 		85F4A45C1B765E8F00728A43 /* LILRFC3339DateTransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F4A45B1B765E8F00728A43 /* LILRFC3339DateTransformerTests.m */; };
+		85FAAAA41B7BDB0D00D901FA /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 85FAAAA01B7BDB0D00D901FA /* LICENSE */; };
+		85FAAAA51B7BDB0D00D901FA /* LILKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 85FAAAA11B7BDB0D00D901FA /* LILKit.podspec */; };
+		85FAAAA61B7BDB0D00D901FA /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 85FAAAA21B7BDB0D00D901FA /* Podfile */; };
+		85FAAAA71B7BDB0D00D901FA /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 85FAAAA31B7BDB0D00D901FA /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		85F4A4571B7658F700728A43 /* LILRFC3339DateTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LILRFC3339DateTransformer.h; path = transformers/LILRFC3339DateTransformer.h; sourceTree = "<group>"; };
 		85F4A4581B7658F700728A43 /* LILRFC3339DateTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LILRFC3339DateTransformer.m; path = transformers/LILRFC3339DateTransformer.m; sourceTree = "<group>"; };
 		85F4A45B1B765E8F00728A43 /* LILRFC3339DateTransformerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LILRFC3339DateTransformerTests.m; sourceTree = "<group>"; };
+		85FAAAA01B7BDB0D00D901FA /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		85FAAAA11B7BDB0D00D901FA /* LILKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LILKit.podspec; path = ../LILKit.podspec; sourceTree = "<group>"; };
+		85FAAAA21B7BDB0D00D901FA /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
+		85FAAAA31B7BDB0D00D901FA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A527607B9F415A1AE3616E89 /* Pods-LILKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LILKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-LILKit/Pods-LILKit.release.xcconfig"; sourceTree = "<group>"; };
 		ADB49F0B338F4F75F0D1AC03 /* Pods_LILKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LILKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -166,6 +174,10 @@
 		85EC27F31B737EBE005BE4DF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				85FAAAA01B7BDB0D00D901FA /* LICENSE */,
+				85FAAAA11B7BDB0D00D901FA /* LILKit.podspec */,
+				85FAAAA21B7BDB0D00D901FA /* Podfile */,
+				85FAAAA31B7BDB0D00D901FA /* README.md */,
 				85EC27F41B737EBE005BE4DF /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -276,6 +288,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85FAAAA61B7BDB0D00D901FA /* Podfile in Resources */,
+				85FAAAA41B7BDB0D00D901FA /* LICENSE in Resources */,
+				85FAAAA51B7BDB0D00D901FA /* LILKit.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +343,7 @@
 			files = (
 				85B61FEE1B73F68D00B935AE /* LILUTCDateTransformer.m in Sources */,
 				85F4A45A1B7658F700728A43 /* LILRFC3339DateTransformer.m in Sources */,
+				85FAAAA71B7BDB0D00D901FA /* README.md in Sources */,
 				85EC28021B738004005BE4DF /* NSString+LILAdditions.m in Sources */,
 				85E8DD271B769894004D3585 /* LILLogFormatter.m in Sources */,
 			);
