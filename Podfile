@@ -6,7 +6,7 @@ xcodeproj 'LILKit.xcodeproj'
 use_frameworks!
 
 target 'LILKit' do
-pod 'CocoaLumberjack', '~> 2.0.1'
+pod 'CocoaLumberjack', '2.0.0'
 end
 
 target 'LILKitTests' do
