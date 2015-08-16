@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		62E4E4DCD842B96A64352F3A /* Pods_LILKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD916D9309B46DF15266052E /* Pods_LILKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		85AD21231B7E9FD900B9D09E /* LILFetchedResultsControllerDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 85AD21211B7E9FD900B9D09E /* LILFetchedResultsControllerDataSource.h */; };
+		85AD21241B7E9FD900B9D09E /* LILFetchedResultsControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AD21221B7E9FD900B9D09E /* LILFetchedResultsControllerDataSource.m */; };
+		85AD21271B7EA04400B9D09E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85AD21261B7EA04400B9D09E /* CoreData.framework */; };
 		85B61FE91B73A65E00B935AE /* LILNSStringAdditionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B61FE81B73A65E00B935AE /* LILNSStringAdditionsTests.m */; };
 		85B61FED1B73F68D00B935AE /* LILUTCDateTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 85B61FEB1B73F68D00B935AE /* LILUTCDateTransformer.h */; };
 		85B61FEE1B73F68D00B935AE /* LILUTCDateTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B61FEC1B73F68D00B935AE /* LILUTCDateTransformer.m */; };
@@ -17,6 +20,8 @@
 		85EC27EF1B737EBE005BE4DF /* LILKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85EC27E31B737EBD005BE4DF /* LILKit.framework */; };
 		85EC28011B738004005BE4DF /* NSString+LILAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 85EC27FF1B738004005BE4DF /* NSString+LILAdditions.h */; };
 		85EC28021B738004005BE4DF /* NSString+LILAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 85EC28001B738004005BE4DF /* NSString+LILAdditions.m */; };
+		85F3C4851B7FD6D500DB424A /* LILLogFormatterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F3C4841B7FD6D500DB424A /* LILLogFormatterTests.m */; };
+		85F3C4871B7FEBAA00DB424A /* LILFetchedResultsControllerDataSourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F3C4861B7FEBAA00DB424A /* LILFetchedResultsControllerDataSourceTests.m */; };
 		85F4A4561B74B2E100728A43 /* LILUTCDateTransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F4A4551B74B2E100728A43 /* LILUTCDateTransformerTests.m */; };
 		85F4A4591B7658F700728A43 /* LILRFC3339DateTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 85F4A4571B7658F700728A43 /* LILRFC3339DateTransformer.h */; };
 		85F4A45A1B7658F700728A43 /* LILRFC3339DateTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F4A4581B7658F700728A43 /* LILRFC3339DateTransformer.m */; };
@@ -25,6 +30,7 @@
 		85FAAAA51B7BDB0D00D901FA /* LILKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 85FAAAA11B7BDB0D00D901FA /* LILKit.podspec */; };
 		85FAAAA61B7BDB0D00D901FA /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 85FAAAA21B7BDB0D00D901FA /* Podfile */; };
 		85FAAAA71B7BDB0D00D901FA /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 85FAAAA31B7BDB0D00D901FA /* README.md */; };
+		E9E56C20F98102C282B324BB /* Pods_LILKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971CCE6358724BC50CC59BFA /* Pods_LILKitTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		344ACA60245CD564BC45FCD6 /* Pods-LILKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LILKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LILKitTests/Pods-LILKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		579B9FDAFCA5A11FC2A0B252 /* Pods-LILKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LILKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LILKit/Pods-LILKit.debug.xcconfig"; sourceTree = "<group>"; };
+		85AD21211B7E9FD900B9D09E /* LILFetchedResultsControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LILFetchedResultsControllerDataSource.h; path = delegates/LILFetchedResultsControllerDataSource.h; sourceTree = "<group>"; };
+		85AD21221B7E9FD900B9D09E /* LILFetchedResultsControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LILFetchedResultsControllerDataSource.m; path = delegates/LILFetchedResultsControllerDataSource.m; sourceTree = "<group>"; };
+		85AD21261B7EA04400B9D09E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		85B61FE81B73A65E00B935AE /* LILNSStringAdditionsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LILNSStringAdditionsTests.m; sourceTree = "<group>"; };
 		85B61FEB1B73F68D00B935AE /* LILUTCDateTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LILUTCDateTransformer.h; path = transformers/LILUTCDateTransformer.h; sourceTree = "<group>"; };
 		85B61FEC1B73F68D00B935AE /* LILUTCDateTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LILUTCDateTransformer.m; path = transformers/LILUTCDateTransformer.m; sourceTree = "<group>"; };
@@ -51,6 +61,8 @@
 		85EC27F41B737EBE005BE4DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85EC27FF1B738004005BE4DF /* NSString+LILAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+LILAdditions.h"; path = "categories/NSString+LILAdditions.h"; sourceTree = "<group>"; };
 		85EC28001B738004005BE4DF /* NSString+LILAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+LILAdditions.m"; path = "categories/NSString+LILAdditions.m"; sourceTree = "<group>"; };
+		85F3C4841B7FD6D500DB424A /* LILLogFormatterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LILLogFormatterTests.m; sourceTree = "<group>"; };
+		85F3C4861B7FEBAA00DB424A /* LILFetchedResultsControllerDataSourceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LILFetchedResultsControllerDataSourceTests.m; sourceTree = "<group>"; };
 		85F4A4551B74B2E100728A43 /* LILUTCDateTransformerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LILUTCDateTransformerTests.m; sourceTree = "<group>"; };
 		85F4A4571B7658F700728A43 /* LILRFC3339DateTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LILRFC3339DateTransformer.h; path = transformers/LILRFC3339DateTransformer.h; sourceTree = "<group>"; };
 		85F4A4581B7658F700728A43 /* LILRFC3339DateTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LILRFC3339DateTransformer.m; path = transformers/LILRFC3339DateTransformer.m; sourceTree = "<group>"; };
@@ -59,7 +71,9 @@
 		85FAAAA11B7BDB0D00D901FA /* LILKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LILKit.podspec; sourceTree = SOURCE_ROOT; };
 		85FAAAA21B7BDB0D00D901FA /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
 		85FAAAA31B7BDB0D00D901FA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		971CCE6358724BC50CC59BFA /* Pods_LILKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LILKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A527607B9F415A1AE3616E89 /* Pods-LILKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LILKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-LILKit/Pods-LILKit.release.xcconfig"; sourceTree = "<group>"; };
+		C598F1F06D6076198DAF7938 /* Pods-LILKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LILKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LILKitTests/Pods-LILKitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DD916D9309B46DF15266052E /* Pods_LILKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LILKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85AD21271B7EA04400B9D09E /* CoreData.framework in Frameworks */,
 				62E4E4DCD842B96A64352F3A /* Pods_LILKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,6 +92,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85EC27EF1B737EBE005BE4DF /* LILKit.framework in Frameworks */,
+				E9E56C20F98102C282B324BB /* Pods_LILKitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +104,8 @@
 			children = (
 				579B9FDAFCA5A11FC2A0B252 /* Pods-LILKit.debug.xcconfig */,
 				A527607B9F415A1AE3616E89 /* Pods-LILKit.release.xcconfig */,
+				C598F1F06D6076198DAF7938 /* Pods-LILKitTests.debug.xcconfig */,
+				344ACA60245CD564BC45FCD6 /* Pods-LILKitTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -95,9 +113,20 @@
 		68E268C66038FE822F9ADA4A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				85AD21261B7EA04400B9D09E /* CoreData.framework */,
 				DD916D9309B46DF15266052E /* Pods_LILKit.framework */,
+				971CCE6358724BC50CC59BFA /* Pods_LILKitTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		85AD21251B7E9FE200B9D09E /* delegates */ = {
+			isa = PBXGroup;
+			children = (
+				85AD21211B7E9FD900B9D09E /* LILFetchedResultsControllerDataSource.h */,
+				85AD21221B7E9FD900B9D09E /* LILFetchedResultsControllerDataSource.m */,
+			);
+			name = delegates;
 			sourceTree = "<group>";
 		};
 		85B61FEF1B73F69400B935AE /* transformers */ = {
@@ -143,6 +172,7 @@
 		85EC27E51B737EBD005BE4DF /* LILKit */ = {
 			isa = PBXGroup;
 			children = (
+				85AD21251B7E9FE200B9D09E /* delegates */,
 				85EC28031B73800A005BE4DF /* categories */,
 				85B61FEF1B73F69400B935AE /* transformers */,
 				85E8DD281B76989D004D3585 /* utilities */,
@@ -167,6 +197,8 @@
 		85EC27F21B737EBE005BE4DF /* LILKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				85F3C4861B7FEBAA00DB424A /* LILFetchedResultsControllerDataSourceTests.m */,
+				85F3C4841B7FD6D500DB424A /* LILLogFormatterTests.m */,
 				85F4A45B1B765E8F00728A43 /* LILRFC3339DateTransformerTests.m */,
 				85F4A4551B74B2E100728A43 /* LILUTCDateTransformerTests.m */,
 				85B61FE81B73A65E00B935AE /* LILNSStringAdditionsTests.m */,
@@ -199,6 +231,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85AD21231B7E9FD900B9D09E /* LILFetchedResultsControllerDataSource.h in Headers */,
 				85F4A4591B7658F700728A43 /* LILRFC3339DateTransformer.h in Headers */,
 				85EC28011B738004005BE4DF /* NSString+LILAdditions.h in Headers */,
 				85B61FED1B73F68D00B935AE /* LILUTCDateTransformer.h in Headers */,
@@ -234,9 +267,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 85EC27FC1B737EBE005BE4DF /* Build configuration list for PBXNativeTarget "LILKitTests" */;
 			buildPhases = (
+				08B52EEF77AFB28F7C734930 /* Check Pods Manifest.lock */,
 				85EC27EA1B737EBE005BE4DF /* Sources */,
 				85EC27EB1B737EBE005BE4DF /* Frameworks */,
 				85EC27EC1B737EBE005BE4DF /* Resources */,
+				924D11A5C8EEC7E8961F3E37 /* Embed Pods Frameworks */,
+				E96D4777D6D77976232648CE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -304,6 +340,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		08B52EEF77AFB28F7C734930 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		0CD5FE744C2353D46FD4D36D /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -334,6 +385,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LILKit/Pods-LILKit-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		924D11A5C8EEC7E8961F3E37 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LILKitTests/Pods-LILKitTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E96D4777D6D77976232648CE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LILKitTests/Pods-LILKitTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -344,6 +425,7 @@
 				85B61FEE1B73F68D00B935AE /* LILUTCDateTransformer.m in Sources */,
 				85F4A45A1B7658F700728A43 /* LILRFC3339DateTransformer.m in Sources */,
 				85FAAAA71B7BDB0D00D901FA /* README.md in Sources */,
+				85AD21241B7E9FD900B9D09E /* LILFetchedResultsControllerDataSource.m in Sources */,
 				85EC28021B738004005BE4DF /* NSString+LILAdditions.m in Sources */,
 				85E8DD271B769894004D3585 /* LILLogFormatter.m in Sources */,
 			);
@@ -356,6 +438,8 @@
 				85F4A4561B74B2E100728A43 /* LILUTCDateTransformerTests.m in Sources */,
 				85F4A45C1B765E8F00728A43 /* LILRFC3339DateTransformerTests.m in Sources */,
 				85B61FE91B73A65E00B935AE /* LILNSStringAdditionsTests.m in Sources */,
+				85F3C4851B7FD6D500DB424A /* LILLogFormatterTests.m in Sources */,
+				85F3C4871B7FEBAA00DB424A /* LILFetchedResultsControllerDataSourceTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +576,7 @@
 		};
 		85EC27FD1B737EBE005BE4DF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C598F1F06D6076198DAF7938 /* Pods-LILKitTests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -509,6 +594,7 @@
 		};
 		85EC27FE1B737EBE005BE4DF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 344ACA60245CD564BC45FCD6 /* Pods-LILKitTests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

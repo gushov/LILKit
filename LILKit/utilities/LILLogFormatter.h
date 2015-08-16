@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <CocoaLumberjack/CocoaLumberjack.h>
 
+/**
+ *  Custom log formatter for Cocoa LumberJack
+ */
 @interface LILLogFormatter : NSObject <DDLogFormatter>
 
 @end

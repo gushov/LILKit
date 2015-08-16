@@ -19,3 +19,4 @@ FOUNDATION_EXPORT const unsigned char LILKitVersionString[];
 #import <LILKit/NSString+LILAdditions.h>
 #import <LILKit/LILUTCDateTransformer.h>
 #import <LILKit/LILRFC3339DateTransformer.h>
+#import <LILKit/LILFetchedResultsControllerDataSource.h>

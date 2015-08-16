@@ -10,6 +10,6 @@ pod 'CocoaLumberjack', '2.0.0'
 end
 
 target 'LILKitTests' do
-
+pod 'OCMock', '~> 3.1.2'
 end
 
