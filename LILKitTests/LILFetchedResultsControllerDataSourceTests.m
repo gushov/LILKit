@@ -79,7 +79,26 @@
 
 - (void)testUpdateTableView
 {
+    id tableViewMock = OCMClassMock(UITableView.class);
+    id fetchedResultsControlerMock = OCMClassMock(NSFetchedResultsController.class);
+    id dataSourceDelegateMock =
+        OCMProtocolMock(@protocol(LILFetchedResultsControllerDataSourceDelegate));
+    id cellMock = OCMClassMock(UITableViewCell.class);
     
+    NSIndexPath *indexPath = [NSIndexPath indexPathWithIndex:0];
+    NSString *object = @"Yo";
+    
+    OCMStub([fetchedResultsControlerMock objectAtIndexPath:indexPath]).andReturn(object);
+    OCMStub([dataSourceDelegateMock cellWithObject:object]).andReturn(cellMock);
+    
+    LILFetchedResultsControllerDataSource *dataSource =
+        [[LILFetchedResultsControllerDataSource alloc] initWithTableView:tableViewMock];
+    
+    dataSource.fetchedResultsController = fetchedResultsControlerMock;
+    dataSource.delegate = dataSourceDelegateMock;
+    
+    XCTAssertEqualObjects(cellMock,
+                          [dataSource tableView:tableViewMock cellForRowAtIndexPath:indexPath]);
 }
 
 @end

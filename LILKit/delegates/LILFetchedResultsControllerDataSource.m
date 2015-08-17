@@ -80,12 +80,12 @@ sectionForSectionIndexTitle:(NSString *)title
     return [self.delegate cellWithObject:object];
 }
 
-- (NSArray *)sectionIndexTitlesForTableView: (UITableView *)tableView
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
 {
     return nil;
 }
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath: (NSIndexPath *)indexPath
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return YES;
 }
@@ -104,7 +104,7 @@ commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
     [self.tableView beginUpdates];
 }
 
-- (void)controllerDidChangeContent: (NSFetchedResultsController *)controller
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
     [self.tableView endUpdates];
 }

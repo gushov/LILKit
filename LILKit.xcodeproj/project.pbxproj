@@ -26,6 +26,8 @@
 		85F4A4591B7658F700728A43 /* LILRFC3339DateTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 85F4A4571B7658F700728A43 /* LILRFC3339DateTransformer.h */; };
 		85F4A45A1B7658F700728A43 /* LILRFC3339DateTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F4A4581B7658F700728A43 /* LILRFC3339DateTransformer.m */; };
 		85F4A45C1B765E8F00728A43 /* LILRFC3339DateTransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F4A45B1B765E8F00728A43 /* LILRFC3339DateTransformerTests.m */; };
+		85F741EA1B8278EF00E54C90 /* LILCoreDataStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 85F741E81B8278EF00E54C90 /* LILCoreDataStack.h */; };
+		85F741EB1B8278EF00E54C90 /* LILCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F741E91B8278EF00E54C90 /* LILCoreDataStack.m */; };
 		85FAAAA41B7BDB0D00D901FA /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 85FAAAA01B7BDB0D00D901FA /* LICENSE */; };
 		85FAAAA51B7BDB0D00D901FA /* LILKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 85FAAAA11B7BDB0D00D901FA /* LILKit.podspec */; };
 		85FAAAA61B7BDB0D00D901FA /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 85FAAAA21B7BDB0D00D901FA /* Podfile */; };
@@ -67,6 +69,8 @@
 		85F4A4571B7658F700728A43 /* LILRFC3339DateTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LILRFC3339DateTransformer.h; path = transformers/LILRFC3339DateTransformer.h; sourceTree = "<group>"; };
 		85F4A4581B7658F700728A43 /* LILRFC3339DateTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LILRFC3339DateTransformer.m; path = transformers/LILRFC3339DateTransformer.m; sourceTree = "<group>"; };
 		85F4A45B1B765E8F00728A43 /* LILRFC3339DateTransformerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LILRFC3339DateTransformerTests.m; sourceTree = "<group>"; };
+		85F741E81B8278EF00E54C90 /* LILCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LILCoreDataStack.h; path = services/LILCoreDataStack.h; sourceTree = "<group>"; };
+		85F741E91B8278EF00E54C90 /* LILCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LILCoreDataStack.m; path = services/LILCoreDataStack.m; sourceTree = "<group>"; };
 		85FAAAA01B7BDB0D00D901FA /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		85FAAAA11B7BDB0D00D901FA /* LILKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LILKit.podspec; sourceTree = SOURCE_ROOT; };
 		85FAAAA21B7BDB0D00D901FA /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
@@ -172,6 +176,7 @@
 		85EC27E51B737EBD005BE4DF /* LILKit */ = {
 			isa = PBXGroup;
 			children = (
+				85F741EC1B82790A00E54C90 /* services */,
 				85AD21251B7E9FE200B9D09E /* delegates */,
 				85EC28031B73800A005BE4DF /* categories */,
 				85B61FEF1B73F69400B935AE /* transformers */,
@@ -224,6 +229,15 @@
 			name = categories;
 			sourceTree = "<group>";
 		};
+		85F741EC1B82790A00E54C90 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				85F741E81B8278EF00E54C90 /* LILCoreDataStack.h */,
+				85F741E91B8278EF00E54C90 /* LILCoreDataStack.m */,
+			);
+			name = services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -231,6 +245,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85F741EA1B8278EF00E54C90 /* LILCoreDataStack.h in Headers */,
 				85AD21231B7E9FD900B9D09E /* LILFetchedResultsControllerDataSource.h in Headers */,
 				85F4A4591B7658F700728A43 /* LILRFC3339DateTransformer.h in Headers */,
 				85EC28011B738004005BE4DF /* NSString+LILAdditions.h in Headers */,
@@ -425,6 +440,7 @@
 				85B61FEE1B73F68D00B935AE /* LILUTCDateTransformer.m in Sources */,
 				85F4A45A1B7658F700728A43 /* LILRFC3339DateTransformer.m in Sources */,
 				85FAAAA71B7BDB0D00D901FA /* README.md in Sources */,
+				85F741EB1B8278EF00E54C90 /* LILCoreDataStack.m in Sources */,
 				85AD21241B7E9FD900B9D09E /* LILFetchedResultsControllerDataSource.m in Sources */,
 				85EC28021B738004005BE4DF /* NSString+LILAdditions.m in Sources */,
 				85E8DD271B769894004D3585 /* LILLogFormatter.m in Sources */,

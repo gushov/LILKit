@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "LILKit"
-  s.version          = "0.0.4"
+  s.version          = "0.0.5"
   s.summary          = "My Objective-C boilerplate junk."
   s.description      = <<-DESC
                        Objective-C stuff like:
