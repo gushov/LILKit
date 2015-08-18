@@ -11,6 +11,7 @@
 		85AD21231B7E9FD900B9D09E /* LILFetchedResultsControllerDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 85AD21211B7E9FD900B9D09E /* LILFetchedResultsControllerDataSource.h */; };
 		85AD21241B7E9FD900B9D09E /* LILFetchedResultsControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AD21221B7E9FD900B9D09E /* LILFetchedResultsControllerDataSource.m */; };
 		85AD21271B7EA04400B9D09E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85AD21261B7EA04400B9D09E /* CoreData.framework */; };
+		85AFCBB91B83564500411AA5 /* LILCoreDataStackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AFCBB81B83564500411AA5 /* LILCoreDataStackTests.m */; };
 		85B61FE91B73A65E00B935AE /* LILNSStringAdditionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B61FE81B73A65E00B935AE /* LILNSStringAdditionsTests.m */; };
 		85B61FED1B73F68D00B935AE /* LILUTCDateTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 85B61FEB1B73F68D00B935AE /* LILUTCDateTransformer.h */; };
 		85B61FEE1B73F68D00B935AE /* LILUTCDateTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B61FEC1B73F68D00B935AE /* LILUTCDateTransformer.m */; };
@@ -51,6 +52,7 @@
 		85AD21211B7E9FD900B9D09E /* LILFetchedResultsControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LILFetchedResultsControllerDataSource.h; path = delegates/LILFetchedResultsControllerDataSource.h; sourceTree = "<group>"; };
 		85AD21221B7E9FD900B9D09E /* LILFetchedResultsControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LILFetchedResultsControllerDataSource.m; path = delegates/LILFetchedResultsControllerDataSource.m; sourceTree = "<group>"; };
 		85AD21261B7EA04400B9D09E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		85AFCBB81B83564500411AA5 /* LILCoreDataStackTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LILCoreDataStackTests.m; sourceTree = "<group>"; };
 		85B61FE81B73A65E00B935AE /* LILNSStringAdditionsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LILNSStringAdditionsTests.m; sourceTree = "<group>"; };
 		85B61FEB1B73F68D00B935AE /* LILUTCDateTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LILUTCDateTransformer.h; path = transformers/LILUTCDateTransformer.h; sourceTree = "<group>"; };
 		85B61FEC1B73F68D00B935AE /* LILUTCDateTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LILUTCDateTransformer.m; path = transformers/LILUTCDateTransformer.m; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 		85EC27F21B737EBE005BE4DF /* LILKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				85AFCBB81B83564500411AA5 /* LILCoreDataStackTests.m */,
 				85F3C4861B7FEBAA00DB424A /* LILFetchedResultsControllerDataSourceTests.m */,
 				85F3C4841B7FD6D500DB424A /* LILLogFormatterTests.m */,
 				85F4A45B1B765E8F00728A43 /* LILRFC3339DateTransformerTests.m */,
@@ -452,6 +455,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85F4A4561B74B2E100728A43 /* LILUTCDateTransformerTests.m in Sources */,
+				85AFCBB91B83564500411AA5 /* LILCoreDataStackTests.m in Sources */,
 				85F4A45C1B765E8F00728A43 /* LILRFC3339DateTransformerTests.m in Sources */,
 				85B61FE91B73A65E00B935AE /* LILNSStringAdditionsTests.m in Sources */,
 				85F3C4851B7FD6D500DB424A /* LILLogFormatterTests.m in Sources */,

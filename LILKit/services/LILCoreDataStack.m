@@ -18,6 +18,15 @@
 
 @implementation LILCoreDataStack
 
++ (instancetype)stackWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
+                   persistentStoreCoordinator:(NSPersistentStoreCoordinator *)persistentStoreCoordinator
+                                 databaseName:(NSString *)databaseName
+{
+    return [[self alloc] initWithManagedObjectContext:managedObjectContext
+                           persistentStoreCoordinator:persistentStoreCoordinator
+                                         databaseName:databaseName];
+}
+
 - (id)initWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
         persistentStoreCoordinator:(NSPersistentStoreCoordinator *)persistentStoreCoordinator
                       databaseName:(NSString *)databaseName
