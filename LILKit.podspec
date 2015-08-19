@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "LILKit"
-  s.version          = "0.0.5"
+  s.version          = "0.0.6"
   s.summary          = "My Objective-C boilerplate junk."
   s.description      = <<-DESC
                        Objective-C stuff like:
@@ -36,4 +36,5 @@ Pod::Spec.new do |s|
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'CocoaLumberjack', '2.0.0'
+  s.dependency 'ReactiveCocoa', '~> 2.5'
 end

@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
+
+@class NSManagedObjectContext, NSPersistentStoreCoordinator, RACSignal;
 
 @interface LILCoreDataStack : NSObject
 
@@ -23,28 +24,15 @@
  *  @param persistentStoreCoordinator NSPersistenStoreCoordinator for the given context
  *  @param databaseName               Name of the database
  *
- *  @return LILCoreDataStackInstance
+ *  @return RACSignal
  */
-+ (instancetype)stackWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
-                   persistentStoreCoordinator:(NSPersistentStoreCoordinator *)persistentStoreCoordinator
-                                 databaseName:(NSString *)databaseName;
-
-/**
- *  Default initializer for LILCoreDataStack
- *
- *  @param managedObjectContext       NSManagedObjectContext to build the stack around
- *  @param persistentStoreCoordinator NSPersistenStoreCoordinator for the given context
- *  @param databaseName               Name of the database
- *
- *  @return LILCoreDataStackInstance
- */
-- (instancetype)initWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
++ (RACSignal *)stackWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
                   persistentStoreCoordinator:(NSPersistentStoreCoordinator *)persistentStoreCoordinator
                                 databaseName:(NSString *)databaseName;
 
 /**
  *  Save the current context
  */
-- (void) saveContext;
+- (RACSignal *)saveContext;
 
 @end

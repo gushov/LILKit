@@ -10,6 +10,8 @@
 #import <XCTest/XCTest.h>
 #import "LILCoreDataStack.h"
 #import <OCMock/OCMock.h>
+#import <CoreData/CoreData.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface LILCoreDataStackTests : XCTestCase
 
@@ -30,14 +32,21 @@
                                                     URL:[OCMArg any]
                                                 options:[OCMArg any]
                                                   error:[OCMArg anyObjectRef]]).andReturn(storeMock);
+    
     OCMExpect([contextMock setUndoManager:[OCMArg any]]);
     
-    [LILCoreDataStack stackWithManagedObjectContext:contextMock
-                         persistentStoreCoordinator:coordinatorMock databaseName:@"db.sqlite"];
+    [[LILCoreDataStack
+        stackWithManagedObjectContext:contextMock
+        persistentStoreCoordinator:coordinatorMock
+        databaseName:@"db.sqlite"]
+        subscribeError:^(NSError *error) {
+            XCTAssertNil(error);
+        }
+        completed:^{
+            OCMVerifyAll(contextMock);
+            OCMVerifyAll(coordinatorMock);
+        }];
     
-    
-    OCMVerifyAll(contextMock);
-    OCMVerifyAll(coordinatorMock);
 }
 
 - (void)testSaveContext
@@ -56,15 +65,19 @@
     OCMExpect([contextMock hasChanges]).andReturn(YES);
     OCMExpect([contextMock save:[OCMArg anyObjectRef]]).andReturn(YES);
     
-    LILCoreDataStack *stack =
-        [LILCoreDataStack stackWithManagedObjectContext:contextMock
-                             persistentStoreCoordinator:coordinatorMock databaseName:@"db.sqlite"];
-    
-    [stack saveContext];
-    
-    
-    OCMVerifyAll(contextMock);
-    OCMVerifyAll(coordinatorMock);
+    [[LILCoreDataStack
+        stackWithManagedObjectContext:contextMock
+        persistentStoreCoordinator:coordinatorMock
+        databaseName:@"db.sqlite"]
+        subscribeNext:^(LILCoreDataStack *stack) {
+            
+            [stack saveContext];
+            OCMVerifyAll(contextMock);
+            OCMVerifyAll(coordinatorMock);
+        }
+        error:^(NSError *error) {
+            XCTAssertNil(error);
+        }];
 }
 
 @end

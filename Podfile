@@ -7,6 +7,7 @@ use_frameworks!
 
 target 'LILKit' do
 pod 'CocoaLumberjack', '2.0.0'
+pod 'ReactiveCocoa', '~> 2.5'
 end
 
 target 'LILKitTests' do

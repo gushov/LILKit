@@ -8,6 +8,8 @@
 
 #import "LILCoreDataStack.h"
 #import <CocoaLumberjack/CocoaLumberjack.h>
+#import <CoreData/CoreData.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface LILCoreDataStack ()
 @property (nonatomic, strong, readwrite) NSManagedObjectContext *managedObjectContext;
@@ -18,64 +20,71 @@
 
 @implementation LILCoreDataStack
 
-+ (instancetype)stackWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
-                   persistentStoreCoordinator:(NSPersistentStoreCoordinator *)persistentStoreCoordinator
-                                 databaseName:(NSString *)databaseName
++ (RACSignal *)stackWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
+                  persistentStoreCoordinator:(NSPersistentStoreCoordinator *)persistentStoreCoordinator
+                                databaseName:(NSString *)databaseName
 {
-    return [[self alloc] initWithManagedObjectContext:managedObjectContext
-                           persistentStoreCoordinator:persistentStoreCoordinator
-                                         databaseName:databaseName];
+    LILCoreDataStack *stack = [[self alloc] initWithManagedObjectContext:managedObjectContext
+                                              persistentStoreCoordinator:persistentStoreCoordinator
+                                                            databaseName:databaseName];
+    
+    return [stack setupManagedObjectContext];
 }
 
 - (id)initWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
         persistentStoreCoordinator:(NSPersistentStoreCoordinator *)persistentStoreCoordinator
                       databaseName:(NSString *)databaseName
 {
-    self = [super init];
     if (!self) return nil;
+    self = [super init];
     
     managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator;
     _managedObjectContext = managedObjectContext;
     _databaseName = databaseName;
     
-    [self setupManagedObjectContext];
-    
     return self;
 }
 
-- (void)saveContext
+- (RACSignal *)saveContext
 {
-    NSError *error = nil;
-    
-    if ([self.managedObjectContext hasChanges] && ![self.managedObjectContext save:&error]) {
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         
-        DDLogError(@"Unresolved error - %@", [error localizedDescription]);
+        NSError *error = nil;
         
-#ifdef DEBUG
-        abort();
-#endif
-    }
+        if ([self.managedObjectContext hasChanges] && ![self.managedObjectContext save:&error]) {
+            [subscriber sendError:error];
+        }
+        
+        [subscriber sendCompleted];
+        return nil;
+    }];
 }
 
-- (void)setupManagedObjectContext
+- (RACSignal *)setupManagedObjectContext
 {
-    NSError* error;
-    
-    if (![self.managedObjectContext.persistentStoreCoordinator
-          addPersistentStoreWithType:NSSQLiteStoreType
-          configuration:nil
-          URL:[self storeURL]
-          options:nil
-          error:&error]) {
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         
-        DDLogError(@"Adding persistent store failed with - %@", [error localizedDescription]);
+        NSError* error;
+        NSPersistentStoreCoordinator *coordinator =
+            self.managedObjectContext.persistentStoreCoordinator;
         
-#ifdef DEBUG
-        abort();
-#endif
-    }
-    
-    self.managedObjectContext.undoManager = [NSUndoManager new];
+        NSPersistentStore *store = [coordinator addPersistentStoreWithType:NSSQLiteStoreType
+                                                             configuration:nil
+                                                                       URL:self.storeURL
+                                                                   options:nil
+                                                                     error:&error];
+        
+        if (!store) {
+            [subscriber sendError:error];
+        }
+        else {
+            self.managedObjectContext.undoManager = [NSUndoManager new];
+            [subscriber sendNext:self];
+        }
+        
+        [subscriber sendCompleted];
+        return nil;
+    }];
 }
 
 
