@@ -13,34 +13,28 @@
 
 @interface LILCoreDataStack ()
 @property (nonatomic, strong, readwrite) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic, strong, readwrite) NSManagedObjectModel *managedObjectModel;
 @property (nonatomic, strong, readwrite) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (nonatomic, strong, readwrite) NSString *databaseName;
+@property (nonatomic, strong, readwrite) id<LILCoreDataStackAssembly> assembly;
 @end
 
 @implementation LILCoreDataStack
 
-+ (RACSignal *)stackWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
-                  persistentStoreCoordinator:(NSPersistentStoreCoordinator *)persistentStoreCoordinator
-                                databaseName:(NSString *)databaseName
++ (RACSignal *)stackWithAssembly:(id<LILCoreDataStackAssembly>)assembly;
 {
-    LILCoreDataStack *stack = [[self alloc] initWithManagedObjectContext:managedObjectContext
-                                              persistentStoreCoordinator:persistentStoreCoordinator
-                                                            databaseName:databaseName];
-    
+    LILCoreDataStack *stack = [[self alloc] initWithAssembly:assembly];
     return [stack setupManagedObjectContext];
 }
 
-- (id)initWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
-        persistentStoreCoordinator:(NSPersistentStoreCoordinator *)persistentStoreCoordinator
-                      databaseName:(NSString *)databaseName
+- (id)initWithAssembly:(id<LILCoreDataStackAssembly>)assembly
 {
     if (!self) return nil;
     self = [super init];
     
-    managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator;
-    _managedObjectContext = managedObjectContext;
-    _databaseName = databaseName;
+    _assembly = assembly;
+    _managedObjectContext = assembly.mainManagedObjectContext;
+    _managedObjectContext.persistentStoreCoordinator = assembly.persistentStoreCoordinator;
+    _databaseName = assembly.databaseName;
     
     return self;
 }
@@ -64,7 +58,7 @@
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         
         NSManagedObjectContext *privateManagedObjectContext =
-            [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+            self.assembly.privateManagedObjectContext;
     
         [privateManagedObjectContext setParentContext:self.managedObjectContext];
         [subscriber sendNext:privateManagedObjectContext];

@@ -8,7 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@class NSManagedObjectContext, NSPersistentStoreCoordinator, RACSignal;
+@class NSManagedObjectContext, NSPersistentStoreCoordinator, NSManagedObjectModel, RACSignal;
+
+@protocol LILCoreDataStackAssembly <NSObject>
+- (NSManagedObjectContext *)mainManagedObjectContext;
+- (NSManagedObjectContext *)privateManagedObjectContext;
+- (NSPersistentStoreCoordinator *)persistentStoreCoordinator;
+- (NSString *)databaseName;
+@end
 
 @interface LILCoreDataStack : NSObject
 
@@ -20,15 +27,11 @@
 /**
  *  Returns RACSignal with main managed object context
  *
- *  @param managedObjectContext       NSManagedObjectContext to build the stack around
- *  @param persistentStoreCoordinator NSPersistenStoreCoordinator for the given context
- *  @param databaseName               Name of the database
+ *  @param assembly LILCoreDataStackAssembly for the given context
  *
- *  @return RACSignal
+ *  @return RACSignal that passes LILCoreDataStack in subscribeNext
  */
-+ (RACSignal *)stackWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
-                  persistentStoreCoordinator:(NSPersistentStoreCoordinator *)persistentStoreCoordinator
-                                databaseName:(NSString *)databaseName;
++ (RACSignal *)stackWithAssembly:(id<LILCoreDataStackAssembly>)assembly;
 
 /**
  *  Returns RACSignal with a private managed object context
