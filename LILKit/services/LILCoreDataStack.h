@@ -18,7 +18,7 @@
 @property (nonatomic, strong, readonly) NSManagedObjectContext *managedObjectContext;
 
 /**
- *  Factory method for LILCoreDataStack
+ *  Returns RACSignal with main managed object context
  *
  *  @param managedObjectContext       NSManagedObjectContext to build the stack around
  *  @param persistentStoreCoordinator NSPersistenStoreCoordinator for the given context
@@ -29,6 +29,13 @@
 + (RACSignal *)stackWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
                   persistentStoreCoordinator:(NSPersistentStoreCoordinator *)persistentStoreCoordinator
                                 databaseName:(NSString *)databaseName;
+
+/**
+ *  Returns RACSignal with a private managed object context
+ *
+ *  @return RACSignal
+ */
+- (RACSignal *)privateManagedObjectContext;
 
 /**
  *  Save the current context

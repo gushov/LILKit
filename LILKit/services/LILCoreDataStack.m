@@ -50,8 +50,27 @@
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         
         NSError *error = nil;
-        
         if ([self.managedObjectContext hasChanges] && ![self.managedObjectContext save:&error]) {
+            [subscriber sendError:error];
+        }
+        
+        [subscriber sendCompleted];
+        return nil;
+    }];
+}
+
+- (RACSignal *)privateManagedObjectContext
+{
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        
+        NSManagedObjectContext *privateManagedObjectContext =
+            [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+    
+        [privateManagedObjectContext setParentContext:self.managedObjectContext];
+        [subscriber sendNext:privateManagedObjectContext];
+        
+        NSError *error = nil;
+        if ([privateManagedObjectContext hasChanges] && [privateManagedObjectContext save:&error]) {
             [subscriber sendError:error];
         }
         
@@ -86,7 +105,6 @@
         return nil;
     }];
 }
-
 
 - (NSURL*)storeURL
 {

@@ -71,9 +71,45 @@
         databaseName:@"db.sqlite"]
         subscribeNext:^(LILCoreDataStack *stack) {
             
-            [stack saveContext];
-            OCMVerifyAll(contextMock);
-            OCMVerifyAll(coordinatorMock);
+            [[stack saveContext] subscribeError:^(NSError *error) {
+                
+                XCTAssertNil(error);
+                OCMVerifyAll(contextMock);
+                OCMVerifyAll(coordinatorMock);
+            }];
+        }
+        error:^(NSError *error) {
+            XCTAssertNil(error);
+        }];
+}
+
+- (void)testPrivateManagedObjectContext
+{
+    id contextMock = OCMClassMock(NSManagedObjectContext.class);
+    id coordinatorMock = OCMClassMock(NSPersistentStoreCoordinator.class);
+    id storeMock = OCMClassMock(NSPersistentStore.class);
+    
+    OCMStub([contextMock persistentStoreCoordinator]).andReturn(coordinatorMock);
+    OCMStub([coordinatorMock addPersistentStoreWithType:[OCMArg any]
+                                          configuration:[OCMArg any]
+                                                    URL:[OCMArg any]
+                                                options:[OCMArg any]
+                                                  error:[OCMArg anyObjectRef]]).andReturn(storeMock);
+    
+    [[LILCoreDataStack
+        stackWithManagedObjectContext:contextMock
+        persistentStoreCoordinator:coordinatorMock
+        databaseName:@"db.sqlite"]
+        subscribeNext:^(LILCoreDataStack *stack) {
+            
+            [[stack privateManagedObjectContext]
+                subscribeNext:^(NSManagedObjectContext *context) {
+                    OCMVerifyAll(contextMock);
+                    OCMVerifyAll(coordinatorMock);
+                }
+                error:^(NSError *error) {
+                    XCTAssertNil(error);
+                }];
         }
         error:^(NSError *error) {
             XCTAssertNil(error);
