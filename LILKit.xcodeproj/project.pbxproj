@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		62E4E4DCD842B96A64352F3A /* Pods_LILKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD916D9309B46DF15266052E /* Pods_LILKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		858B29221B89E1970052F05B /* LILStringBoolTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 858B29201B89E1970052F05B /* LILStringBoolTransformer.h */; };
+		858B29231B89E1970052F05B /* LILStringBoolTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 858B29211B89E1970052F05B /* LILStringBoolTransformer.m */; };
+		858B29251B89E8CD0052F05B /* LILStringBoolTransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 858B29241B89E8CD0052F05B /* LILStringBoolTransformerTests.m */; };
 		85AD21231B7E9FD900B9D09E /* LILFetchedResultsControllerDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 85AD21211B7E9FD900B9D09E /* LILFetchedResultsControllerDataSource.h */; };
 		85AD21241B7E9FD900B9D09E /* LILFetchedResultsControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AD21221B7E9FD900B9D09E /* LILFetchedResultsControllerDataSource.m */; };
 		85AD21271B7EA04400B9D09E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85AD21261B7EA04400B9D09E /* CoreData.framework */; };
@@ -49,6 +52,9 @@
 /* Begin PBXFileReference section */
 		344ACA60245CD564BC45FCD6 /* Pods-LILKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LILKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LILKitTests/Pods-LILKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		579B9FDAFCA5A11FC2A0B252 /* Pods-LILKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LILKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LILKit/Pods-LILKit.debug.xcconfig"; sourceTree = "<group>"; };
+		858B29201B89E1970052F05B /* LILStringBoolTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LILStringBoolTransformer.h; path = transformers/LILStringBoolTransformer.h; sourceTree = "<group>"; };
+		858B29211B89E1970052F05B /* LILStringBoolTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LILStringBoolTransformer.m; path = transformers/LILStringBoolTransformer.m; sourceTree = "<group>"; };
+		858B29241B89E8CD0052F05B /* LILStringBoolTransformerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LILStringBoolTransformerTests.m; sourceTree = "<group>"; };
 		85AD21211B7E9FD900B9D09E /* LILFetchedResultsControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LILFetchedResultsControllerDataSource.h; path = delegates/LILFetchedResultsControllerDataSource.h; sourceTree = "<group>"; };
 		85AD21221B7E9FD900B9D09E /* LILFetchedResultsControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LILFetchedResultsControllerDataSource.m; path = delegates/LILFetchedResultsControllerDataSource.m; sourceTree = "<group>"; };
 		85AD21261B7EA04400B9D09E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -142,6 +148,8 @@
 				85B61FEC1B73F68D00B935AE /* LILUTCDateTransformer.m */,
 				85F4A4571B7658F700728A43 /* LILRFC3339DateTransformer.h */,
 				85F4A4581B7658F700728A43 /* LILRFC3339DateTransformer.m */,
+				858B29201B89E1970052F05B /* LILStringBoolTransformer.h */,
+				858B29211B89E1970052F05B /* LILStringBoolTransformer.m */,
 			);
 			name = transformers;
 			sourceTree = "<group>";
@@ -204,6 +212,7 @@
 		85EC27F21B737EBE005BE4DF /* LILKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				858B29241B89E8CD0052F05B /* LILStringBoolTransformerTests.m */,
 				85AFCBB81B83564500411AA5 /* LILCoreDataStackTests.m */,
 				85F3C4861B7FEBAA00DB424A /* LILFetchedResultsControllerDataSourceTests.m */,
 				85F3C4841B7FD6D500DB424A /* LILLogFormatterTests.m */,
@@ -255,6 +264,7 @@
 				85B61FED1B73F68D00B935AE /* LILUTCDateTransformer.h in Headers */,
 				85EC27E91B737EBD005BE4DF /* LILKit.h in Headers */,
 				85E8DD261B769894004D3585 /* LILLogFormatter.h in Headers */,
+				858B29221B89E1970052F05B /* LILStringBoolTransformer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +454,7 @@
 				85F4A45A1B7658F700728A43 /* LILRFC3339DateTransformer.m in Sources */,
 				85FAAAA71B7BDB0D00D901FA /* README.md in Sources */,
 				85F741EB1B8278EF00E54C90 /* LILCoreDataStack.m in Sources */,
+				858B29231B89E1970052F05B /* LILStringBoolTransformer.m in Sources */,
 				85AD21241B7E9FD900B9D09E /* LILFetchedResultsControllerDataSource.m in Sources */,
 				85EC28021B738004005BE4DF /* NSString+LILAdditions.m in Sources */,
 				85E8DD271B769894004D3585 /* LILLogFormatter.m in Sources */,
@@ -454,6 +465,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				858B29251B89E8CD0052F05B /* LILStringBoolTransformerTests.m in Sources */,
 				85F4A4561B74B2E100728A43 /* LILUTCDateTransformerTests.m in Sources */,
 				85AFCBB91B83564500411AA5 /* LILCoreDataStackTests.m in Sources */,
 				85F4A45C1B765E8F00728A43 /* LILRFC3339DateTransformerTests.m in Sources */,
