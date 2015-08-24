@@ -64,7 +64,7 @@
         [subscriber sendNext:privateManagedObjectContext];
         
         NSError *error = nil;
-        if ([privateManagedObjectContext hasChanges] && [privateManagedObjectContext save:&error]) {
+        if ([privateManagedObjectContext hasChanges] && ![privateManagedObjectContext save:&error]) {
             [subscriber sendError:error];
         }
         
