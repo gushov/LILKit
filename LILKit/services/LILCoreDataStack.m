@@ -26,6 +26,31 @@
     return [stack setupManagedObjectContext];
 }
 
+- (RACSignal *)asynchronousRequest:(NSFetchRequest *)request
+                           context:(NSManagedObjectContext *)context
+{
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        
+        NSAsynchronousFetchRequest *asynchronousFetchRequest = [[NSAsynchronousFetchRequest alloc]
+            initWithFetchRequest:request
+            completionBlock:^(NSAsynchronousFetchResult *result) {
+                
+                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                    [subscriber sendNext:result.finalResult];
+                }];
+            }];
+        
+        [context performBlock:^{
+            NSError *error;
+            if (![context executeRequest:asynchronousFetchRequest error:&error]) {
+                [subscriber sendError:error];
+            }
+        }];
+        
+        return nil;
+    }];
+}
+
 - (id)initWithAssembly:(id<LILCoreDataStackAssembly>)assembly
 {
     if (!self) return nil;

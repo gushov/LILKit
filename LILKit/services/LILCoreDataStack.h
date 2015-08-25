@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
 @class NSManagedObjectContext, NSPersistentStoreCoordinator, NSManagedObjectModel, RACSignal;
 
@@ -32,6 +33,17 @@
  *  @return RACSignal that passes LILCoreDataStack in subscribeNext
  */
 + (RACSignal *)stackWithAssembly:(id<LILCoreDataStackAssembly>)assembly;
+
+/**
+ *  Perform asynchronous fetch for given request
+ *
+ *  @param request NSFetchRequest to perform asychronously
+ *  @param context NSManagedObjectContext
+ *
+ *  @return RACSignal
+ */
+- (RACSignal *)asynchronousRequest:(NSFetchRequest *)request
+                           context:(NSManagedObjectContext *)context;
 
 /**
  *  Returns RACSignal with a private managed object context
