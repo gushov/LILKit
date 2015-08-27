@@ -7,7 +7,6 @@
 //
 
 #import "LILCoreDataStack.h"
-#import <CocoaLumberjack/CocoaLumberjack.h>
 #import <CoreData/CoreData.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
@@ -27,7 +26,6 @@
 }
 
 - (RACSignal *)asynchronousRequest:(NSFetchRequest *)request
-                           context:(NSManagedObjectContext *)context
 {
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         
@@ -40,12 +38,14 @@
                 }];
             }];
         
-        [context performBlock:^{
+        [self.managedObjectContext performBlock:^{
             NSError *error;
-            if (![context executeRequest:asynchronousFetchRequest error:&error]) {
+            if (![self.managedObjectContext executeRequest:asynchronousFetchRequest error:&error]) {
                 [subscriber sendError:error];
             }
         }];
+        
+        [subscriber sendCompleted];
         
         return nil;
     }];

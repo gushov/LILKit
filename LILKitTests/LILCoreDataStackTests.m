@@ -117,4 +117,52 @@
         }];
 }
 
+- (void)testAsynchronousRequest
+{
+    OCMExpect([self.privateContextMock hasChanges]).andReturn(YES);
+    OCMExpect([self.privateContextMock save:[OCMArg anyObjectRef]]).andReturn(YES);
+    
+    XCTestExpectation *expectation = [self expectationWithDescription:@"asynchronous request"];
+    
+    id requestMock = OCMClassMock(NSFetchRequest.class);
+    id asynchRequestMock = OCMClassMock(NSAsynchronousFetchRequest.class);
+    id asynchResultMock = OCMClassMock(NSAsynchronousFetchResult.class);
+    
+    OCMStub([asynchResultMock finalResult]).andReturn(@[]);
+    OCMStub([asynchRequestMock alloc]).andReturn(asynchRequestMock);
+    
+    OCMStub([asynchRequestMock initWithFetchRequest:[OCMArg any] completionBlock:[OCMArg any]])
+        .andDo(^(NSInvocation *invocation) {
+            void (^passedBlock)( NSArray * );
+            [invocation getArgument:&passedBlock atIndex:3];
+            passedBlock(asynchResultMock);
+        });
+    
+    OCMStub([asynchRequestMock alloc]).andReturn(asynchRequestMock);
+    
+    [[LILCoreDataStack
+        stackWithAssembly:self.assemblyMock]
+        subscribeNext:^(LILCoreDataStack *stack) {
+            
+            [[stack asynchronousRequest:requestMock]
+                subscribeNext:^(NSArray *results) {
+                    XCTAssertEqualObjects(@[], results);
+                }
+                error:^(NSError *error) {
+                    XCTAssertNil(error);
+                }
+                completed:^{
+                    [expectation fulfill];
+                }];
+        }
+        error:^(NSError *error) {
+            XCTAssertNil(error);
+        }];
+    
+    [self waitForExpectationsWithTimeout:10.0 handler:^(NSError *error) {
+        OCMVerifyAll(requestMock);
+        OCMVerifyAll(asynchRequestMock);
+    }];
+}
+
 @end

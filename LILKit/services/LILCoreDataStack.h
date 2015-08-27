@@ -38,12 +38,10 @@
  *  Perform asynchronous fetch for given request
  *
  *  @param request NSFetchRequest to perform asychronously
- *  @param context NSManagedObjectContext
  *
  *  @return RACSignal
  */
-- (RACSignal *)asynchronousRequest:(NSFetchRequest *)request
-                           context:(NSManagedObjectContext *)context;
+- (RACSignal *)asynchronousRequest:(NSFetchRequest *)request;
 
 /**
  *  Returns RACSignal with a private managed object context
