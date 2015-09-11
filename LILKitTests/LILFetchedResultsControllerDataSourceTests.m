@@ -82,7 +82,7 @@
     id tableViewMock = OCMClassMock(UITableView.class);
     id fetchedResultsControlerMock = OCMClassMock(NSFetchedResultsController.class);
     id dataSourceDelegateMock =
-        OCMProtocolMock(@protocol(LILFetchedResultsControllerDataSourceDelegate));
+        OCMProtocolMock(@protocol(LILDataSourceDelegate));
     id cellMock = OCMClassMock(UITableViewCell.class);
     
     NSIndexPath *indexPath = [NSIndexPath indexPathWithIndex:0];

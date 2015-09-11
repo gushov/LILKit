@@ -16,7 +16,7 @@
 
 @implementation LILFetchedResultsControllerDataSource
 
-- (id)initWithTableView:(UITableView*)tableView
+- (instancetype)initWithTableView:(UITableView*)tableView
 {
     self = [super init];
     if (!self) return nil;
@@ -36,7 +36,7 @@
 
 - (void)setPaused:(BOOL)paused
 {
-    _paused = paused;
+    super.paused = paused;
     
     if (paused) {
         self.fetchedResultsController.delegate = nil;
