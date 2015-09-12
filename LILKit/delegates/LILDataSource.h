@@ -31,6 +31,7 @@
 
 @end
 
+
 /**
  *  DatasSource delegate
  */
@@ -40,11 +41,6 @@
  *  LILFetchedResultsControllerDataSourceDelegate
  */
 @property (nonatomic, weak) id<LILDataSourceDelegate> delegate;
-
-/**
- *  Pause updates
- */
-@property (nonatomic, assign) BOOL paused;
 
 /**
  *  Default initializer

@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 August Hovland. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 #import "LILDataSource.h"
 
@@ -20,5 +19,10 @@
  *  The NSFetchedResultsController to use as the data source for the UITableView
  */
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+
+/**
+ *  Pause updates
+ */
+@property (nonatomic, assign) BOOL paused;
 
 @end

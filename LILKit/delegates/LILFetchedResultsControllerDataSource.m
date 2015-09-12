@@ -36,7 +36,7 @@
 
 - (void)setPaused:(BOOL)paused
 {
-    super.paused = paused;
+    _paused = paused;
     
     if (paused) {
         self.fetchedResultsController.delegate = nil;
@@ -129,6 +129,7 @@ commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
             break;
         
         case NSFetchedResultsChangeUpdate:
+            
             [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:sectionIndex]
                           withRowAnimation:UITableViewRowAnimationFade];
             break;
