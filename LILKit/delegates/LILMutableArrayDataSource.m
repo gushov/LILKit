@@ -8,22 +8,11 @@
 
 #import "LILMutableArrayDataSource.h"
 
-@interface LILMutableArrayDataSource ()
+@interface LILDataSource ()
 @property (nonatomic, strong) UITableView *tableView;
 @end
 
 @implementation LILMutableArrayDataSource
-
-- (instancetype)initWithTableView:(UITableView*)tableView
-{
-    self = [super init];
-    if (!self) return nil;
-    
-    _tableView = tableView;
-    _tableView.dataSource = self;
-    
-    return self;
-}
 
 - (void)setMutableArray:(NSMutableArray *)mutableArray
 {

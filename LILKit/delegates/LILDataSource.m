@@ -9,13 +9,21 @@
 #import "LILDataSource.h"
 
 @interface LILDataSource ()
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, assign) BOOL sectionsUpdated;
 @end
 
 @implementation LILDataSource
 
 - (instancetype)initWithTableView:(UITableView*)tableView
 {
-    return nil;
+    self = [super init];
+    if (!self) return nil;
+    
+    _tableView = tableView;
+    _tableView.dataSource = self;
+    
+    return self;
 }
 
 - (id)selectedItem

@@ -9,23 +9,12 @@
 #import "LILFetchedResultsControllerDataSource.h"
 #import <CocoaLumberjack/CocoaLumberjack.h>
 
-@interface LILFetchedResultsControllerDataSource ()
+@interface LILDataSource ()
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, assign) BOOL sectionsUpdated;
 @end
 
 @implementation LILFetchedResultsControllerDataSource
-
-- (instancetype)initWithTableView:(UITableView*)tableView
-{
-    self = [super init];
-    if (!self) return nil;
-    
-    _tableView = tableView;
-    _tableView.dataSource = self;
-    
-    return self;
-}
 
 - (void)setFetchedResultsController:(NSFetchedResultsController *)fetchedResultsController
 {
